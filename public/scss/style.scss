@@ -1,0 +1,84 @@
+@import 'color';
+
+html {
+    background-color: $main-color;
+    color: $txt-dark;
+}
+
+header {
+    margin-top: -10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: .25rem .5rem;
+    background-color: $dark-accent-color;
+    color: white;
+    border-bottom: 1px solid $dark-accent-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $font-header, Times, serif;
+        font-size: 20pt;
+    }
+    p {
+        font-family: $font-basic, Arial, sans-serif;
+        font-size: 16pt;
+    }
+}
+
+.nav-dark {
+    @include nav;
+    background: $bg-dark;
+    p:not(.active) {
+        color: $txt-l-inactive;
+        a {
+            color: $txt-l-inactive;
+        }
+        a:hover {
+            color: $txt-light;
+        }
+    }
+    p.disabled {
+        color: $txt-l-disabled;
+        a {
+            color: $txt-l-disabled;
+        }
+    }
+    p.nav-title {
+        color: $txt-light;
+        a {
+            color: $txt-light;
+        }
+    }
+    p.active {
+        color: $txt-light;
+        font-weight: 500;
+        a {
+            color: $txt-light;
+        }
+    }
+    .nav-icon {
+        color: $txt-light;
+        font-size: 16pt;
+    }
+}
+
+footer {
+    margin: 0;
+    padding: .15rem .5rem;
+    background-color: $dark-accent-color;
+    color: white;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $font-header, Times, serif;
+        font-size: 16pt;
+    }
+    p {
+        font-family: $font-basic, Arial, sans-serif;
+        font-size: 12pt;
+    }
+}
+
